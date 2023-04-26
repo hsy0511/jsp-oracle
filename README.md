@@ -13,97 +13,29 @@ jsp는 기본적으로 html에서 자바코드를 넣어 실행된다.
 대부분 jsp 문법을 스크릿트립을 기본으로 쓴다. 
 
 ```jsp
-<%@page import="jdk.internal.misc.FileSystemOption"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<% // 선언부 %>
-<%! String name = "홍길동"; %>
-<%! public int plus(int a, int b){ return a+b;} %>
-
 <% // 스크릿트립  %>
 <% int a = 5; %>
 <% int b = 5; %>
 <% if(5>1){
 	System.out.println("5는 1보다 크다");
 }%>
-
-</body>
-</html>
 ```
-
-결과
-
-![image](https://user-images.githubusercontent.com/104752580/234433733-0f5b4065-8ad8-4d2e-93e0-40ff8d19ab74.png)
 ### 3. jsp 선언부
 선언부는 <%! %>로 사용하고 변수,메소드 등을 선언할때 사용하는 태그
 
 ```jsp
-<%@page import="jdk.internal.misc.FileSystemOption"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
 <% // 선언부 %>
 <%! String name = "홍길동"; %>
 <%! public int plus(int a, int b){ return a+b;} %>
-
-<% // 스크릿트립  %>
-<% int a = 5; %>
-<% int b = 5; %>
-<% if(5>1){
-	System.out.println("5는 1보다 크다");
-}%>
-
-</body>
-</html>
 ```
-
-결과
-
-![image](https://user-images.githubusercontent.com/104752580/234434084-7f9763f3-2851-4b82-9432-227d423083e8.png)
 ### 4. jsp 표현부
 표현부는 <%= %>로 사용되고 스크릿트립과 선언부에서 사용한 문법의 결과를 표현한다.
 
 ```jsp
-<%@page import="jdk.internal.misc.FileSystemOption"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<% // 선언부 %>
-<%! String name = "홍길동"; %>
-<%! public int plus(int a, int b){ return a+b;} %>
-
 <% // 표현부 %>
-
 <p><%= name %></p>
 <p><%= plus(5,5) %></p>
-
-</body>
-</html>
 ```
-
-결과
-
-![image](https://user-images.githubusercontent.com/104752580/234434221-8efd4757-e588-486b-bb18-3957fb88c408.png)
-
 ### 5. jsp 지시어
 jsp 지시문은 서블릿 클래스의 전체 구조에 영향을 준고, jsp 파일을 어떻게 처리할지 정보 등을 기술한다.
 
@@ -123,7 +55,10 @@ page 속성은 이러한 것들이 있다. 하지만 우리가 대표적으로 �
 
 예제를 보며 살펴보자.
 
-![image](https://user-images.githubusercontent.com/104752580/234435951-b89adba5-9a94-4973-9b25-2e2653640ff4.png)
+```jsp
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+```
 
 여기서 contentType이 text/html 이므로 html 문서 타입으로 페이지를 작성하겠다는 내용이 된다.
 
@@ -131,7 +66,9 @@ page 속성은 이러한 것들이 있다. 하지만 우리가 대표적으로 �
 
 예제를 보며 살펴보자.
 
-![image](https://user-images.githubusercontent.com/104752580/234436519-9cfa7b7a-f2aa-454f-b9e8-3d58ba5909e4.png)
+```jsp
+<%@ page import="java.sql.*" %>
+```
 
 여기서 import는 java sql 클래스를 사용하기 위해서 임폴트한 것이다.
 
