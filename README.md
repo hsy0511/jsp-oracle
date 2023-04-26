@@ -294,7 +294,7 @@ TCL은 크게 commit, rollback, savepoint 등으로 나뉜다.
 #### COMMIT
 commit은 이전 데이터를 영구히 저장하기 위해 쓰인다.
 
-![image](https://user-images.githubusercontent.com/104752580/234477051-53a5190b-8c3a-4f91-9bb9-f38598e38d08.png)
+![image](https://user-images.githubusercontent.com/104752580/234478079-3f0adc4d-2e7e-4102-b7f3-fad3c3527aee.png)
 
 commit으로 테이블을 조회 할 때 까지를 저장한다.
 
