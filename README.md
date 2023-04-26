@@ -183,9 +183,9 @@ DDL에서 자주 사용되는 데이터 타입을 알아보자
 
 DDL에서 자주 사용되는 데이터 타입으로는 char, varchar2, date, number 등이 있다.
 
-- char는 고정길이 문자형을 저장한다.
+- char는 고정길이(레코드의 길이를 일정하게 지정해놓는 방법) 문자형을 저장한다.
 
-- varchar2는 가변길이 문자형을 저장한다.
+- varchar2는 가변길이(필요한 만큼의 저장 공간만 차지하여 저장되는 문자의 개수) 문자형을 저장한다.
 
 - date는 날짜, 연도, 월, 일, 시간 등을 저장한다.
 
@@ -284,6 +284,8 @@ revoke create user, alter user, drop user from scott;
 SCOTT 계정에 준 권한을 삭제한다.
 ### TCL (Transaction Control Language)
 TCL은 DB에서 트랜잭션을 제어하는 명령어이다.(데이터를 저장하여 복구 가능한 명령어)
+
+※ 트랜잭션 : 쪼갤 수 없는 업무 처리의 최소 단위
 
 TCL은 크게 commit, rollback, savepoint 등으로 나뉜다.
 
