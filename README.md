@@ -152,7 +152,7 @@ DDL은 크게 create, drop, alter 등으로 나뉜다.
 #### CREATE
 create는 테이블을 생성한다.
 
-```DB
+```oracle
 EX 테이블을 생성한다.
 create table EX( 
 gno number(5) not null primary key,
