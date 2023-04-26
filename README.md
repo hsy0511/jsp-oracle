@@ -52,7 +52,8 @@ page 속성을 알아보자.
 
 page 속성은 이러한 것들이 있다. 하지만 우리가 대표적으로 사용하는 속성 3개만 알아보자.
 
-### 첫번째는 contentType이다. contentType은 jsp 페이지가 생성할 문서의 타입을 지정하는 것이다.
+### 첫번째는 contentType이다.
+contentType은 jsp 페이지가 생성할 문서의 타입을 지정하는 것이다.
 
 예제를 보며 살펴보자.
 
@@ -63,7 +64,8 @@ page 속성은 이러한 것들이 있다. 하지만 우리가 대표적으로 �
 
 여기서 contentType이 text/html 이므로 html 문서 타입으로 페이지를 작성하겠다는 내용이 된다.
 
-### 두번째는 improt이다. import는 jsp 페이지에서 자바의 클래스를 사용하기 위해서 사용하는 것이다.
+### 두번째는 improt이다.
+import는 jsp 페이지에서 자바의 클래스를 사용하기 위해서 사용하는 것이다.
 
 예제를 보며 살펴보자.
 
@@ -73,7 +75,8 @@ page 속성은 이러한 것들이 있다. 하지만 우리가 대표적으로 �
 
 여기서 import는 java sql 클래스를 사용하기 위해서 임폴트한 것이다.
 
-### 세번째는 pageEncoding이다. pageEncoding은 jsp 파일 작성시의 문자코드를 지정하기 위한 속성이다.
+### 세번째는 pageEncoding이다.
+pageEncoding은 jsp 파일 작성시의 문자코드를 지정하기 위한 속성이다.
 
 예제를 보며 살펴보자
 
