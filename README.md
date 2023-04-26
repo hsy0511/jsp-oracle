@@ -152,8 +152,15 @@ DDL은 크게 create, drop, alter 등으로 나뉜다.
 #### CREATE
 create는 테이블을 생성한다.
 
-![image](https://user-images.githubusercontent.com/104752580/234448616-4e500a29-54a8-487f-bad9-09c715455ac3.png)
-
+```DB
+EX 테이블을 생성한다.
+create table EX( 
+gno number(5) not null primary key,
+school varchar2(40),
+name varchar2(20),
+phone varchar2(30)
+);
+```
 #### DROP
 drop은 테이블을 삭제한다.
 
