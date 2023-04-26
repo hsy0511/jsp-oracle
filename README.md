@@ -12,7 +12,31 @@ jsp는 기본적으로 html에서 자바코드를 넣어 실행된다.
 
 대부분 jsp 문법을 스크릿트립을 기본으로 쓴다. 
 
-![image](https://user-images.githubusercontent.com/104752580/234433653-54eebd1b-f15d-4318-b34a-a29bec561095.png)
+```jsp
+<%@page import="jdk.internal.misc.FileSystemOption"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<% // 선언부 %>
+<%! String name = "홍길동"; %>
+<%! public int plus(int a, int b){ return a+b;} %>
+
+<% // 스크릿트립  %>
+<% int a = 5; %>
+<% int b = 5; %>
+<% if(5>1){
+	System.out.println("5는 1보다 크다");
+}%>
+
+</body>
+</html>
+```
 
 결과
 
@@ -20,7 +44,31 @@ jsp는 기본적으로 html에서 자바코드를 넣어 실행된다.
 ### 3. jsp 선언부
 선언부는 <%! %>로 사용하고 변수,메소드 등을 선언할때 사용하는 태그
 
-![image](https://user-images.githubusercontent.com/104752580/234434035-6bdd3313-c087-4807-8ea5-01f18233b45c.png)
+```jsp
+<%@page import="jdk.internal.misc.FileSystemOption"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<% // 선언부 %>
+<%! String name = "홍길동"; %>
+<%! public int plus(int a, int b){ return a+b;} %>
+
+<% // 스크릿트립  %>
+<% int a = 5; %>
+<% int b = 5; %>
+<% if(5>1){
+	System.out.println("5는 1보다 크다");
+}%>
+
+</body>
+</html>
+```
 
 결과
 
@@ -28,7 +76,29 @@ jsp는 기본적으로 html에서 자바코드를 넣어 실행된다.
 ### 4. jsp 표현부
 표현부는 <%= %>로 사용되고 스크릿트립과 선언부에서 사용한 문법의 결과를 표현한다.
 
-![image](https://user-images.githubusercontent.com/104752580/234434193-07f3470a-ef70-430e-896e-dbba80c5678d.png)
+```jsp
+<%@page import="jdk.internal.misc.FileSystemOption"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<% // 선언부 %>
+<%! String name = "홍길동"; %>
+<%! public int plus(int a, int b){ return a+b;} %>
+
+<% // 표현부 %>
+
+<p><%= name %></p>
+<p><%= plus(5,5) %></p>
+
+</body>
+</html>
+```
 
 결과
 
