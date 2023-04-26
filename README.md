@@ -76,7 +76,10 @@ page 속성은 이러한 것들이 있다. 하지만 우리가 대표적으로 �
 
 예제를 보며 살펴보자
 
-![image](https://user-images.githubusercontent.com/104752580/234437007-588246d1-fad9-4783-bdf4-4773c5da75bc.png)
+```jsp
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+```
 
 여기서 pageEncoding을 utf-8로 지정했기 때문에 문서코드가 한글로 지정된 것으로 볼 수 있다. 
 
