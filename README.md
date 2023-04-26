@@ -126,3 +126,112 @@ jsp:forward는 현재 페이지에서 다른 페이지로 이동할 때 사용�
 ex1.jsp 페이지에 <jsp:include page="ex.jsp">를 사용하여 ex1.jsp 페이지에서 ex.jsp 페이지로 이동한 것이다.
 
 ## oracle database 기초문법
+oracle database는 크게 DQL, DDL, DML, DCL, TCL으로 4가지 그룹으로 나눌 수 있다.
+
+### DQL
+DQL은 데이터 질의 언어이다.
+
+DQL에는 select가 있다. select는 DML에도 사용 가능하다.
+
+select 사용 방법은 DML에서 설명 하겠다.
+### DDL (Data Definition Language)
+DDL은 DB에서 데이터를 정의하는 언어이다. (생성, 수정, 삭제가 가능한 명령어)
+
+DDL은 크게 create, drop, alter 등으로 나뉜다.
+
+#### CREATE
+create는 테이블을 생성한다.
+
+![image](https://user-images.githubusercontent.com/104752580/234448616-4e500a29-54a8-487f-bad9-09c715455ac3.png)
+
+#### DROP
+drop은 테이블을 삭제한다.
+
+![image](https://user-images.githubusercontent.com/104752580/234448699-0ec96f64-4960-45d9-a97c-b1a22c93e2a7.png)
+
+#### ARTER
+alter는 테이블의 데이터를 추가, 변경, 삭제한다.
+
+![image](https://user-images.githubusercontent.com/104752580/234448908-98f9b692-810d-43b8-a867-eb238eb69928.png)
+![image](https://user-images.githubusercontent.com/104752580/234450649-a78794f6-2a6f-46fe-84e0-cefb92e67959.png)
+![image](https://user-images.githubusercontent.com/104752580/234450857-e7d9220e-5736-4e03-b111-6339501169a6.png)
+
+DDL에서 자주 사용되는 데이터 타입을 알아보자
+
+DDL에서 자주 사용되는 데이터 타입으로는 char, varchar2, date, number 등이 있다.
+
+- char는 고정길이 문자형을 저장한다.
+
+- varchar2는 가변길이 문자형을 저장한다.
+
+- date는 날짜, 연도, 월, 일, 시간 등을 저장한다.
+
+- number는 숫자형을 저장한다.(음수, 양수)
+### DML (Data manipulation language)
+DML은 DB에서 데이터를 조작하는 명령어이다. (데이터 조회, 삽입, 변경, 삭제 가능한 명령어)
+
+DML은 크게 select, insert, update, delete 등으로 나뉜다.
+
+#### SELECT
+select는 데이터를 조건 값에 따라서 조회한다.
+
+![image](https://user-images.githubusercontent.com/104752580/234452092-001a7217-546c-4ee7-9168-aaa7dbfa159e.png)
+
+#### INSERT
+insert는 데이터를 삽입한다.
+
+![image](https://user-images.githubusercontent.com/104752580/234452478-d791961f-b927-4d41-a258-daa4df71dea9.png)
+
+#### UPDATE
+update는 데이터를 변경한다.
+
+![image](https://user-images.githubusercontent.com/104752580/234452656-798af212-3dbb-4241-b8a8-387f16b25bbe.png)
+
+#### DELETE
+delete는 데이터를 조건 값에 따라서 삭제한다.
+
+![image](https://user-images.githubusercontent.com/104752580/234452871-3de42ce2-ea93-4449-b14c-e9ec18d1ff08.png)
+
+### DCL (Data Control Language)
+DCL은 DB에서 데이터에 대한 객체 권한 부여 등의 제어어이다.
+
+DCL은 크게 grant, revoke 등으로 나뉜다.
+
+#### GRANT
+grant는 사용자에게 시스템 접속 권한을 부여하거나, 생성, 병경, 추가, 삭제 권한을 부여한다.
+
+![image](https://user-images.githubusercontent.com/104752580/234453707-4915e26f-d9dd-40d2-93fa-a173a5d3d983.png)
+
+SCOTT 계정에서 데이터를 CREATE, ALTER, DROP 할 수 있게 권한을 준다.
+
+#### REVOKE
+revoke는 grant로 사용자에게 부여한 권한을 삭제한다.
+
+![image](https://user-images.githubusercontent.com/104752580/234453973-88cb1327-d638-4d61-ae95-b31c4b69f7f4.png)
+
+SCOTT 계정에 준 권한을 삭제한다.
+### TCL (Transaction Control Language)
+TCL은 DB에서 트랜잭션을 제어하는 명령어이다.(데이터를 저장하여 복구 가능한 명령어)
+
+TCL은 크게 commit, rollback, savepoint 등으로 나뉜다.
+
+#### COMMIT
+commit은 이전 데이터를 영구히 저장하기 위해 쓰인다.
+
+![image](https://user-images.githubusercontent.com/104752580/234455119-5db6dd97-beba-4401-9da3-fd098a9ea074.png)
+
+commit으로 테이블을 조회 할 때 까지를 저장한다.
+
+#### ROLLBACK
+rollback은 이전 commit까지 데이터를  복구 시킨다.
+
+![image](https://user-images.githubusercontent.com/104752580/234455972-9e98332a-a097-4377-a60a-d2e54486288d.png)
+
+테이블을 삭제하기 전 commit까지 복구 시킨다.
+
+#### SAVEPOINT
+savepoint도 commit과 같이 사용하지만 다른점은 지점을 저장한다.
+즉, commit과 rollback을 사용하면 바로 이전 commit까지 데이터를 복구하지만
+savepoint는 지정한 c1값까지 데이터를 복구한다. rollback to savepoint c1을 사용한다.
+
+![image](https://user-images.githubusercontent.com/104752580/234467386-128b542f-7da6-40a7-9bbf-3ec58124ee5b.png)
