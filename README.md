@@ -294,14 +294,14 @@ TCL은 크게 commit, rollback, savepoint 등으로 나뉜다.
 #### COMMIT
 commit은 이전 데이터를 영구히 저장하기 위해 쓰인다.
 
-![image](https://user-images.githubusercontent.com/104752580/234455119-5db6dd97-beba-4401-9da3-fd098a9ea074.png)
+![image](https://user-images.githubusercontent.com/104752580/234477051-53a5190b-8c3a-4f91-9bb9-f38598e38d08.png)
 
 commit으로 테이블을 조회 할 때 까지를 저장한다.
 
 #### ROLLBACK
 rollback은 이전 commit까지 데이터를  복구 시킨다.
 
-![image](https://user-images.githubusercontent.com/104752580/234455972-9e98332a-a097-4377-a60a-d2e54486288d.png)
+![image](https://user-images.githubusercontent.com/104752580/234477238-3f94c3fc-a81d-4070-a431-883ab7f243fc.png)
 
 테이블을 삭제하기 전 commit까지 복구 시킨다.
 
@@ -310,4 +310,6 @@ savepoint도 commit과 같이 사용하지만 다른점은 지점을 저장한�
 즉, commit과 rollback을 사용하면 바로 이전 commit까지 데이터를 복구하지만
 savepoint는 지정한 c1값까지 데이터를 복구한다. rollback to savepoint c1을 사용한다.
 
-![image](https://user-images.githubusercontent.com/104752580/234467386-128b542f-7da6-40a7-9bbf-3ec58124ee5b.png)
+![image](https://user-images.githubusercontent.com/104752580/234477614-c9ce777c-8366-4bfc-aa1d-22f9af3e5e1d.png)
+![image](https://user-images.githubusercontent.com/104752580/234477647-3b08c5d5-5e16-448c-88bc-17f7df71271f.png)
+
