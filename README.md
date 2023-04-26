@@ -152,7 +152,7 @@ DDL은 크게 create, drop, alter 등으로 나뉜다.
 #### CREATE
 create는 테이블을 생성한다.
 
-```oracle
+```sql
 EX 테이블을 생성한다.
 create table EX( 
 gno number(5) not null primary key,
@@ -164,14 +164,20 @@ phone varchar2(30)
 #### DROP
 drop은 테이블을 삭제한다.
 
-![image](https://user-images.githubusercontent.com/104752580/234448699-0ec96f64-4960-45d9-a97c-b1a22c93e2a7.png)
+```sql
+EX 테이블을 삭제한다.
+drop table EX;
+```
 
 #### ARTER
 alter는 테이블의 데이터를 추가, 변경, 삭제한다.
 
-![image](https://user-images.githubusercontent.com/104752580/234448908-98f9b692-810d-43b8-a867-eb238eb69928.png)
-![image](https://user-images.githubusercontent.com/104752580/234450649-a78794f6-2a6f-46fe-84e0-cefb92e67959.png)
-![image](https://user-images.githubusercontent.com/104752580/234450857-e7d9220e-5736-4e03-b111-6339501169a6.png)
+```sql
+EX 테이블 내용을 추가, 변경, 삭제한다.
+alter table EX add ho varchar2(20); 추가
+alter table EX modify column star bigint default 10000; 변경
+alter table Ex drop column star, drop primary key; 삭제
+```
 
 DDL에서 자주 사용되는 데이터 타입을 알아보자
 
@@ -192,22 +198,67 @@ DML은 크게 select, insert, update, delete 등으로 나뉜다.
 #### SELECT
 select는 데이터를 조건 값에 따라서 조회한다.
 
-![image](https://user-images.githubusercontent.com/104752580/234452092-001a7217-546c-4ee7-9168-aaa7dbfa159e.png)
+```sql
+EX 테이블의 모든 데이터를 조회한다.
+select * from EX;
+
+EX 테이블의 school 데이터를 조회한다.
+select school from EX;
+
+EX 테이블에서 school 데이터가 성일정보고인 모든 데이터를 조회한다.
+select * from EX
+where
+school = '성일정보고';
+
+EX 테이블에서 school 데이터가 성일정보고인 name 데이터를 조회한다.
+select name from EX
+where
+school = '성일정보고';
+
+EX 테이블에서 gno가 #**nn이면 #학년 **반으로 데이터를 조회한다.
+select case gno
+when 31528 then '3학년 15반'
+when 30212 then '3학년 2반'
+when 30802 then '3학년 8반'
+when 31111 then '3한년 11반'
+end as gno
+from ex;
+
+EX 테이블에서 EZ 테이블에 name으로 조인한 값에 jno와 food 데이터를 조회한다.
+select x.name, z.jno, z.food from ex x, ez z
+where x.name = z.name;
+```
 
 #### INSERT
 insert는 데이터를 삽입한다.
 
-![image](https://user-images.githubusercontent.com/104752580/234452478-d791961f-b927-4d41-a258-daa4df71dea9.png)
+```sql
+EX 테이블에 데이터를 삽입한다.
+insert into EX values(31528,'성일정보고','허성영','010-7736-7452');
+insert into EX values(30212,'성일고','허성일','010-7736-7452');
+insert into EX values(30802,'풍생고','허성이','010-7736-7452');
+insert into EX values(31111,'성일정보고','허성삼','010-7736-7452');
+```
 
 #### UPDATE
 update는 데이터를 변경한다.
 
-![image](https://user-images.githubusercontent.com/104752580/234452656-798af212-3dbb-4241-b8a8-387f16b25bbe.png)
+```sql
+EX 테이블에서 name이 허성함인 phone 데이터를 변경한다.
+update EX set phone = '010-7736-7452'
+where name = '허성삼';
+```
 
 #### DELETE
 delete는 데이터를 조건 값에 따라서 삭제한다.
 
-![image](https://user-images.githubusercontent.com/104752580/234452871-3de42ce2-ea93-4449-b14c-e9ec18d1ff08.png)
+```sql
+EX 테이블에 있는 모든 데이터 삭제
+delete from EX;
+
+EX 테이블에서 name이 허성삼인 데이터 삭제
+delete from EX where name = '허성삼';
+```
 
 ### DCL (Data Control Language)
 DCL은 DB에서 데이터에 대한 객체 권한 부여 등의 제어어이다.
@@ -217,14 +268,18 @@ DCL은 크게 grant, revoke 등으로 나뉜다.
 #### GRANT
 grant는 사용자에게 시스템 접속 권한을 부여하거나, 생성, 병경, 추가, 삭제 권한을 부여한다.
 
-![image](https://user-images.githubusercontent.com/104752580/234453707-4915e26f-d9dd-40d2-93fa-a173a5d3d983.png)
+```sql
+grant create user, alter user, drop user to scott with admin option;
+```
 
 SCOTT 계정에서 데이터를 CREATE, ALTER, DROP 할 수 있게 권한을 준다.
 
 #### REVOKE
 revoke는 grant로 사용자에게 부여한 권한을 삭제한다.
 
-![image](https://user-images.githubusercontent.com/104752580/234453973-88cb1327-d638-4d61-ae95-b31c4b69f7f4.png)
+```sql
+revoke create user, alter user, drop user from scott;
+```
 
 SCOTT 계정에 준 권한을 삭제한다.
 ### TCL (Transaction Control Language)
