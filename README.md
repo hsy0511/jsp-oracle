@@ -142,6 +142,9 @@ ex1.jsp 페이지에 <jsp:include page="ex.jsp">를 사용하여 ex1.jsp 페이�
 # oracle database 기초문법
 oracle database는 크게 DQL, DDL, DML, DCL, TCL으로 4가지 그룹으로 나눌 수 있다.
 
+## sql 실행순서
+![image](https://user-images.githubusercontent.com/104752580/234499466-4388a46a-0032-4318-8d55-b2161f7ebe62.png)
+
 ## DQL
 DQL은 데이터 질의(의심나는 점을 물어서 밝히는 것) 언어이다.
 
