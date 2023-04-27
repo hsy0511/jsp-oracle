@@ -63,7 +63,7 @@ contentType은 jsp 페이지가 생성할 문서의 타입을 지정하는 것�
 ```
 
 여기서 contentType이 text/html 이므로 html 문서 타입으로 페이지를 작성하겠다는 내용이 된다.
-
+#### ※ utf-8 (Unicode Transformation Format - 8bit) : 가변 길이 유니코드 인코딩
 ### 두번째는 improt이다.
 import는 jsp 페이지에서 자바의 클래스를 사용하기 위해서 사용하는 것이다.
 
