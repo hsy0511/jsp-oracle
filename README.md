@@ -222,7 +222,7 @@ select name from EX
 where
 school = '성일정보고';
 
-EX 테이블에서 gno가 #**nn이면 #학년 **반으로 데이터를 조회한다.
+EX 테이블에서 gno가 31528이면 3학년 15반으로 데이터를 조회한다.
 select case gno
 when 31528 then '3학년 15반'
 when 30212 then '3학년 2반'
