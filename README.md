@@ -113,7 +113,7 @@ insert into EX values(31111,'성일정보고','허성삼','010-7736-7452');
 update는 데이터를 변경한다.
 
 ```sql
-EX 테이블에서 name이 허성함인 phone 데이터를 변경한다.
+EX 테이블에서 name이 허성인 phone 데이터를 변경한다.
 update EX set phone = '010-7736-7452'
 where name = '허성삼';
 ```
