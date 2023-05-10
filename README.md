@@ -119,7 +119,7 @@ where name = '허성삼';
 ```
 ### alter와 update 차이점
 ![image](https://github.com/hsy0511/oracle-/assets/104752580/b5b94b86-4ca7-4c83-8eed-e2a6e1f6034d)
-
+###### ※ 레코드: 데이터베이스에서 하나의 단위로 취급되는 자료의 집합
 ### DELETE
 delete는 데이터를 조건 값에 따라서 삭제한다.
 
