@@ -1,4 +1,4 @@
-# oracle
+# oracle-foundation
 # oracle database 기초문법
 oracle database는 크게 DQL, DDL, DML, DCL, TCL으로 5가지 그룹으로 나눌 수 있다.
 
