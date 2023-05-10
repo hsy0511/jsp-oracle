@@ -5,7 +5,8 @@ oracle database는 크게 DQL, DDL, DML, DCL, TCL으로 5가지 그룹으로 나
 ## sql 실행순서
 ![image](https://user-images.githubusercontent.com/104752580/234499466-4388a46a-0032-4318-8d55-b2161f7ebe62.png)
 
-sql은 from -> where -> group by -> having -> select -> orderby 순으로 실행된다.
+### sql은 from -> where -> group by -> having -> select -> orderby 순으로 실행된다.
+
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/e7af957d-13bf-4e09-9d2c-5f09fe6fcb9e)
 
 ## DQL
