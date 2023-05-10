@@ -117,6 +117,8 @@ EX 테이블에서 name이 허성인 phone 데이터를 변경한다.
 update EX set phone = '010-7736-7452'
 where name = '허성삼';
 ```
+### alter와 update 차이점
+![image](https://github.com/hsy0511/oracle-/assets/104752580/b5b94b86-4ca7-4c83-8eed-e2a6e1f6034d)
 
 ### DELETE
 delete는 데이터를 조건 값에 따라서 삭제한다.
