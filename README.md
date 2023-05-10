@@ -6,6 +6,7 @@ oracle database는 크게 DQL, DDL, DML, DCL, TCL으로 5가지 그룹으로 나
 ![image](https://user-images.githubusercontent.com/104752580/234499466-4388a46a-0032-4318-8d55-b2161f7ebe62.png)
 
 sql은 from -> where -> group by -> having -> select -> orderby 순으로 실행된다.
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/e7af957d-13bf-4e09-9d2c-5f09fe6fcb9e)
 
 ## DQL
 DQL은 데이터 질의(의심나는 점을 물어서 밝히는 것) 언어이다.
