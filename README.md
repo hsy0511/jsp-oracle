@@ -43,9 +43,9 @@ alter는 테이블의 데이터를 추가, 변경, 삭제한다.
 
 ```sql
 EX 테이블 내용을 추가, 변경, 삭제한다.
-alter table EX add ho varchar2(20); 추가
-alter table EX modify column star bigint default 10000; 변경
-alter table Ex drop column star, drop primary key; 삭제
+alter table EX add ho varchar2(20); ho 컬럼 추가
+alter table EX modify column star bigint default 10000; star 컬럼에 기본 데이터 값을 100으로 변경
+alter table Ex drop column star, drop primary key; 제약조건 기본키 삭제
 ```
 
 DDL에서 자주 사용되는 데이터 타입을 알아보자
