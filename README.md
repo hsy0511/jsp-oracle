@@ -178,6 +178,7 @@ rollback은 이전 commit까지 데이터를  복구 시킨다.
 savepoint도 commit과 같이 사용하지만 다른점은 지점을 저장한다.
 즉, commit과 rollback을 사용하면 바로 이전 commit까지 데이터를 복구하지만
 savepoint는 지정한 c1값까지 데이터를 복구한다. rollback to savepoint c1을 사용한다.
+막약에 saveponit를 사용할 때 c1, c2, c3가 있으면 c3를 갔다가 c1를 갈 수 있지만, c1을 간다음에 c2와 c3를 갈수는 없다.
 
 ![image](https://user-images.githubusercontent.com/104752580/234477614-c9ce777c-8366-4bfc-aa1d-22f9af3e5e1d.png)
 ![image](https://user-images.githubusercontent.com/104752580/234477647-3b08c5d5-5e16-448c-88bc-17f7df71271f.png)
