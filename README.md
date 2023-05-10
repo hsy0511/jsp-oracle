@@ -59,6 +59,13 @@ DDL에서 자주 사용되는 데이터 타입으로는 char, varchar2, date, nu
 - date는 날짜, 연도, 월, 일, 시간 등을 저장한다.
 
 - number는 숫자형을 저장한다.(음수, 양수)
+
+### char와 varchar2의 차이점
+char는 고정길이고, varchr2는 가변길이이다.
+
+즉, char는  CHAR(8)로 선언 시 글자를 한 개를 넣든 두 개를 넣든 8바이트의 공간을 차지합니다.
+
+하지만 varchar2는 VARCHAR(8)로 선언 시 글자를 한 개를 넣으면 1바이트, 2개를 넣으면 2바이트의 공간을 유동적으로 차지합니다.
 ## DML (Data manipulation language)
 DML은 DB에서 데이터를 조작하는 명령어이다. (데이터 조회, 삽입, 변경, 삭제 가능한 명령어)
 
