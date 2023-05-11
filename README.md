@@ -50,7 +50,12 @@ alter table EX modify column star bigint default 10000; star 컬럼에 기본 �
 alter table Ex drop column star, drop primary key; 제약조건 기본키 삭제
 ```
 
-DDL에서 자주 사용되는 데이터 타입을 알아보자
+DDL에서 사용되는 데이터 타입을 알아보자
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/26f2d034-1b1b-4682-90c9-6ed79baaf94a)
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/e0f55faf-546a-4282-b52c-cfc9a38c6af5)
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/946bffc7-6bd3-4f87-9034-b7acfe5bf974)
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/44b8c8ca-4a99-47b5-98c3-e7267e70ff1c)
+###### ※ lob: 대용량 데이터를 저장할 수 있는 데이터 타입(그래픽, 이미지, 사운드등 비정형 데이터)
 
 DDL에서 자주 사용되는 데이터 타입으로는 char, varchar2, date, number 등이 있다.
 
