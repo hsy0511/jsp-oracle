@@ -271,7 +271,30 @@ select distinct deptno from emp;
 ```
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/9d356d24-94f1-42b3-b056-841ede7ae6d5)
 ### like 연산자(해당 문자포함 여부)
-![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/a1baa834-083c-46a6-a6b1-21d7cb16fabe)
+- 이름이 J로 시작하는 사원
+```sql
+select ename from emp WHERE ename LIKE 'J%';
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/5800fbfb-8963-4478-9290-a8a65bfdb0d2)
+
+- 이름에 A가 들어가는 사원
+```sql
+select ename from emp WHERE ename LIKE '%A%';
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/7abab802-fc68-483b-927b-75707b84ecdf)
+
+- 이름이 N으로 끝나는 사원
+```sql
+select ename from emp WHERE ename LIKE '%N';
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/812957bc-d10c-4867-b39f-3ae2ed62fc0f)
+
+- 이름의 두 번째 글자가 A인 사원
+```sql
+select ename from emp WHERE ename LIKE '_A%';
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/81cb3ec2-acfc-404a-9bd2-45895e2973ec)
+
 ### in 연산자
 - 여러개의 값 중에서 일치하는 값이 있으면 참
 - 두개말고 여러개도 가능 
