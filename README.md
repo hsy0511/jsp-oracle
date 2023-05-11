@@ -9,13 +9,13 @@ oracle database는 크게 DQL, DDL, DML, DCL, TCL으로 5가지 그룹으로 나
 
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/e7af957d-13bf-4e09-9d2c-5f09fe6fcb9e)
 
-## DQL
+## DQL(Data Query Language: 데이터 쿼리 언어)
 DQL은 데이터 질의(의심나는 점을 물어서 밝히는 것) 언어이다.
 
 DQL에는 select가 있다. select는 DML에도 사용 가능하다.
 
 select 사용 방법은 DML에서 설명 하겠다.
-## DDL (Data Definition Language)
+## DDL (Data Definition Language: 데이터 정의 언어)
 DDL은 DB에서 데이터를 정의하는 언어이다. (생성, 수정, 삭제가 가능한 명령어)
 
 DDL은 크게 create, drop, alter 등으로 나뉜다.
@@ -76,7 +76,7 @@ char는 고정길이고, varchr2는 가변길이이다.
 즉, char는  CHAR(8)로 선언 시 글자를 한 개를 넣든 두 개를 넣든 8바이트의 공간을 차지합니다.
 
 하지만 varchar2는 VARCHAR(8)로 선언 시 글자를 한 개를 넣으면 1바이트, 2개를 넣으면 2바이트의 공간을 유동적으로 차지합니다.
-## DML (Data manipulation language)
+## DML (Data manipulation language: 데이터 조작 언어)
 DML은 DB에서 데이터를 조작하는 명령어이다. (데이터 조회, 삽입, 변경, 삭제 가능한 명령어)
 
 DML은 크게 select, insert, update, delete 등으로 나뉜다.
@@ -169,7 +169,7 @@ revoke create user, alter user, drop user from scott;
 ```
 
 SCOTT 계정에 준 권한을 삭제한다.
-## TCL (Transaction Control Language)
+## TCL (Transaction Control Language: 트랜잭션 제어 언어)
 TCL은 DB에서 트랜잭션을 제어하는 명령어이다.(데이터를 저장하여 복구 가능한 명령어)
 
 ※ 트랜잭션 : 쪼갤 수 없는 업무 처리의 최소 단위
