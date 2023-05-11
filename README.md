@@ -56,6 +56,7 @@ DDL에서 사용되는 데이터 타입을 알아보자
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/e0f55faf-546a-4282-b52c-cfc9a38c6af5)
 ###### ※ 부동소수점: 소수점의 위치를 고정하지 않고 그 위치를 나타내는 수를 따로 적는 소수점
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/946bffc7-6bd3-4f87-9034-b7acfe5bf974)
+###### ※ BC: 기원전
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/44b8c8ca-4a99-47b5-98c3-e7267e70ff1c)
 ###### ※ lob: 대용량 데이터를 저장할 수 있는 데이터 타입(그래픽, 이미지, 사운드등 비정형 데이터)
 ###### ※ 문자집합: 정보를 표현하기 위한 글자나 기호들의 집합
