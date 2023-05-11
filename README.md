@@ -192,21 +192,165 @@ savepoint는 지정한 c1값까지 데이터를 복구한다. rollback to savepo
 ![image](https://user-images.githubusercontent.com/104752580/234477614-c9ce777c-8366-4bfc-aa1d-22f9af3e5e1d.png)
 ![image](https://user-images.githubusercontent.com/104752580/234477647-3b08c5d5-5e16-448c-88bc-17f7df71271f.png)
 
-# 쿼리문
-## 1. 서브쿼리
+
+## 서브쿼리
 서브쿼리는 쿼리문을 작성할 때 메인쿼리 안에서 작성하는 쿼리이다.
 
 서브쿼리에는 주로 3개에 서브 쿼리를 씁니다.
 
-###### ※ 스칼라: 단일값에 적용이 되어서 단일값의 결과(즉, 여기서는 dept 테이블에서 dept_name 데이터를 가져온것이다.)
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/98b9c716-a4ca-4290-bd61-f3032d603aae)
+###### ※ 스칼라: 단일값에 적용이 되어서 단일값의 결과(즉, 여기서는 dept 테이블에서 dept_name 데이터를 가져온것이다.)
+### 뷰와 인라인 뷰 차이점
+뷰는 재활용이 가능하지만 인라인 뷰는 쿼리문에서만 사용되는 임시 뷰이기 때문에 재활용이 불가능 하다.
 ### 스칼라 서브 쿼리 예제
 dept_name을 가져오는 쿼리입니다. 
 
-스칼라 서브쿼리를 이용하여 select문 안에서 dept 테이블을 연결합니다.(조인을 대신하여 사용)
+스칼라 서브쿼리를 이용하여 select문 안에서 dept 테이블을 연결합니다.(아우터 조인을 대신하여 사용)
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/f90da64c-17fd-4ab6-adf4-5ee2b7da0833)
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/07405bec-8652-4a18-b41b-036c6c251781)
 
 ### 인라인 뷰 예제
+인라인 안에서 실행되는 쿼리문으로 from 절에서 사용되는데 예제에서는 inner join을 사용하여 dept 테이블과 연결 시켜주었다.
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/3e9f5b7e-a443-4186-aaf2-293e9e447e62)
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/2402943b-ca97-4db8-a482-dc27e5377c8c)
-
 ### 중첩 서브쿼리 예제
+중첩 서브쿼리는 서브쿼리를 중첩하여 사용할 수 있는 것으로 예제에서는 in으로 서브쿼리를 중첩하여 사용했다.
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/a9f11bd0-d4e4-45ec-8919-9123e2dc7b17)
+
+## 오라클에서 사용되는 명령어(위에서 설명한것 제외)
+### 모든 테이블 출력
+```sql
+select * from tab;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/b4961415-a2bd-4a3e-be68-2bb2e7f219c3)
+### 테이블 구조 확인
+```sql
+desc dept;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/cb2c3802-b067-4f07-bced-92efce36b942)
+### 산술연산처리(숫자형 컬럼만 가능하다.)
+```sql
+select ename, sal*12 from emp;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/2a2b18ef-41d7-4590-b054-e43f0b19d498)
+### 별칭(alias)
+```sql
+select empno as num, ename as name from emp;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/2abcaa92-cb0f-446d-9908-3b78da71055f)
+```sql
+select empno num, ename name from emp;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/2abcaa92-cb0f-446d-9908-3b78da71055f)
+```sql
+select empno "<n u m>", ename "<n a m e>" from emp;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/c145847f-7412-4a30-9ce2-abf8dff06f40)
+```sql
+select empno "<n u m>", sql*100 "$ S A L" from emp;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/f15a6630-98d5-4cde-8926-d0987cc5ed6a)
+### || 연결 연산자
+###### ※ 주의할 점: 오라클에서 문자열은 (' ')로 표현된다.(" ")는 오직 별칭을 사용할 때만 사용된다. 
+```sql
+select ename, 'is a', job from emp;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/d14b3ac4-f8f3-4af7-a643-fe5b17e93e34)
+```sql
+select ename || 'is a' || job from emp;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/51513a33-fd59-4ae0-bfb2-b1887cf58d96)
+### distinct(중복제거)
+```sql
+select deptno from emp;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/b6439227-d9f2-46b7-b684-5e9fdfda9960)
+```sql
+select distinct deptno from emp;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/9d356d24-94f1-42b3-b056-841ede7ae6d5)
+### like 연산자(해당 문자포함 여부)
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/a1baa834-083c-46a6-a6b1-21d7cb16fabe)
+### in 연산자
+- 여러개의 값 중에서 일치하는 값이 있으면 참
+- 두개말고 여러개도 가능 
+- 논리 연산자 or 대신 사용 가능
+- 날짜와 문자도 비교 가능
+```sql
+select empno, ename, deptno from emp where deptno in (10,20);
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/344e5a17-633f-44c6-9cd8-9d685c0a3a49)
+```sql 
+select empno, ename, job
+from emp
+where job in ('CLERK', 'MANAGER');
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/8e97024d-28e9-47df-b398-8865eeed1e4f)
+### between a and b 연산자
+- a에서 b까지의 범위 값을 조회
+- 논리연산자 and 대신 사용 가능
+```sql
+select ename from emp where sal between 2000 and 4000;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/31714a5a-bbe8-4ba8-8d85-3419e7efd3d0)
+### 논리 연산자(where 절에 조건이 두 개 이상일 경우)
+- AND: 두 조건을 모두 만족
+```sql
+select ename, job, deptno from emp where job = 'CLERK' and deptno = 10;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/53828e70-b0c7-4e6b-a181-e2ec742e4ce9)
+```sql
+select ename, job, sal from emp where sal >= 2000 and sal <= 4000;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/f5fb0f31-5dcf-468f-9c75-63976dcf67fd)
+- or: 두 조건 중에서 한 가지만 만족
+```sql
+select ename, job, deptno from emp where job = 'CLERK' or job = 'MANAGER';
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/283ec258-5c29-49d8-ad4b-48ded5e6ff20)
+```sql
+select ename, job, deptno from emp where deptno = 10 or deptno = 20;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/f5ecf081-71e9-4190-b2f6-71663a710059)
+### 논리 연산자(where 절의 조건에 해당하지 않을 경우 검색
+- not
+```sql
+select empno, ename, deptno from emp where not deptno = 20;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/88954cf1-d389-4720-898e-64369a67006b)
+- not in
+```sql
+select empno, ename, deptno from emp where deptno not in (10,20);
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/e9cd4e36-763e-40b5-8ff6-5be206e4c9e8)
+- not between a and b
+```sql
+select empno, ename, sal from emp where sal not between 2000 and 4000;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/d2427412-dbe8-453e-97e0-8912a0f10d09)
+- not like
+```sql
+select empno, ename from emp where ename not like '%A%';
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/dd36b80e-5346-4f19-8b4e-27f95dcbfbbd)
+### is null, is not null(컬럼값이 null인지 아닌지 비교)
+- null
+```sql
+select empno, ename, mgr from emp where mgr is null;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/a9725683-936b-4eae-9777-c8a58da9a2ca)
+- is not null
+```sql
+select empno, ename, mgr from emp where mgr is not null;
+```
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/cf0c167d-f1c0-4e24-918c-f3871a493416)
+## oracle 단축키
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/93d7aa38-1d33-4ab0-8fd6-686a219719dc)
+###### ※ 세션: SQL명령어 사용을 통해서 데이터베이스와의 상호 연결되어 있는 기간
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/3f230ed5-08c1-48a3-bdd4-50c07d9fdff2)
+###### ※ 스크립트: 여러 쿼리문이 모여있는 것
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/bc096b18-72c2-47b0-9426-b15c1be954ae)
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/60930b29-ce2b-49b5-adc3-8a0fdca51d1e)
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/82b077c1-2d79-4c24-b3e9-2fc49a019532)
+
+
