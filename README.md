@@ -172,7 +172,7 @@ SCOTT 계정에 준 권한을 삭제한다.
 ## TCL (Transaction Control Language: 트랜잭션 제어 언어)
 TCL은 DB에서 트랜잭션을 제어하는 명령어이다.(데이터를 저장하여 복구 가능한 명령어)
 
-※ 트랜잭션 : 쪼갤 수 없는 업무 처리의 최소 단위
+###### ※ 트랜잭션 : 쪼갤 수 없는 업무 처리의 최소 단위
 
 TCL은 크게 commit, rollback, savepoint 등으로 나뉜다.
 
