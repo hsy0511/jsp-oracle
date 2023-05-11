@@ -383,6 +383,7 @@ select empno, ename, mgr from emp where mgr is not null;
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/cf0c167d-f1c0-4e24-918c-f3871a493416)
 ## oracle 단축키
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/93d7aa38-1d33-4ab0-8fd6-686a219719dc)
+###### ※ tool: 도구
 ###### ※ 세션: SQL명령어 사용을 통해서 데이터베이스와의 상호 연결되어 있는 기간
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/3f230ed5-08c1-48a3-bdd4-50c07d9fdff2)
 ###### ※ 스크립트: 여러 쿼리문이 모여있는 것
