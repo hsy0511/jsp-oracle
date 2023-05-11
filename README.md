@@ -8,7 +8,7 @@ oracle database는 크게 DQL, DDL, DML, DCL, TCL으로 5가지 그룹으로 나
 ### sql은 from -> where -> group by -> having -> select -> orderby 순으로 실행된다.
 
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/e7af957d-13bf-4e09-9d2c-5f09fe6fcb9e)
-###### ※ 레코드: 데이터베이스에서 하나의 단위로 취급되는 자료의 집합
+
 ## DQL
 DQL은 데이터 질의(의심나는 점을 물어서 밝히는 것) 언어이다.
 
@@ -63,7 +63,7 @@ DDL에서 사용되는 데이터 타입을 알아보자
 DDL에서 자주 사용되는 데이터 타입은 char, varchar2, date, number 등이 있다.
 
 - char는 고정길이(레코드의 길이를 일정하게 지정해놓는 방법) 문자형을 저장한다.
-
+###### ※ 레코드: 데이터베이스에서 하나의 단위로 취급되는 자료의 집합
 - varchar2는 가변길이(필요한 만큼의 저장 공간만 차지하여 저장되는 문자의 개수) 문자형을 저장한다.
 
 - date는 날짜, 연도, 월, 일, 시간 등을 저장한다.
