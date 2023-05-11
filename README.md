@@ -387,19 +387,20 @@ select empno, ename, mgr from emp where mgr is not null;
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/60930b29-ce2b-49b5-adc3-8a0fdca51d1e)
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/82b077c1-2d79-4c24-b3e9-2fc49a019532)
 ## oracle 특징
-- 1. DB서버가 통합된 하나의 스토리를 공유하여 사용한다.
-- 2. 별도의 DBMS를 설치해 사용하는 것이 불가능하다.
-- 3. 메모리 사용율이 커서 최소 수백 MB를 요구한다.
-- 4. Multiple Database 튜닝이 가능함(mupltiple: 다수의)
-- 5. 다수의 사용자가 동시 접근이 가능하다.
-- 6. 변경 plan을 작성하고 실제 구현 전의 변경 사향의 효과를 볼 수 있다. 
-- 7. 유료화로 인한 비용부담
-- 8. 많은 기능으로 초보자의 접근이 어려움
+- DB서버가 통합된 하나의 스토리를 공유하여 사용한다.
+- 별도의 DBMS를 설치해 사용하는 것이 불가능하다.
+###### ※ DBMS(Database Management System): 데이터베이스 관리 시스템
+- 메모리 사용율이 커서 최소 수백 MB를 요구한다.
+- Multiple Database 튜닝이 가능함(mupltiple: 다수의)
+- 다수의 사용자가 동시 접근이 가능하다.
+- 변경 계획을 작성하고 실제 구현 전의 변경 사향의 효과를 볼 수 있다. 
+- 유료화로 인한 비용부담
+- 많은 기능으로 초보자의 접근이 어려움
 ## oracle을 사용하는 이유
 오라클 DB를 쓰는 가장 큰 이유는 RAC(Real application clusters)라는 기능 때문이다.
 
 RAC는 간단히 말하면 하나의 DB를 여러 서버가 공유하는 기술이다.
 
 그래서 하나의 DB를 여러 서버가 공유하기 때문에 서버 하나가 장애가 나도 데이터 정합성이 유지되기 때문이다.
-
+###### 정합성: 어떤 데이터들이 값이 서로 일치하는 상태
 
