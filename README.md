@@ -192,3 +192,21 @@ savepoint는 지정한 c1값까지 데이터를 복구한다. rollback to savepo
 ![image](https://user-images.githubusercontent.com/104752580/234477614-c9ce777c-8366-4bfc-aa1d-22f9af3e5e1d.png)
 ![image](https://user-images.githubusercontent.com/104752580/234477647-3b08c5d5-5e16-448c-88bc-17f7df71271f.png)
 
+# 쿼리문
+## 1. 서브쿼리
+서브쿼리는 쿼리문을 작성할 때 메인쿼리 안에서 작성하는 쿼리이다.
+
+서브쿼리에는 주로 3개에 서브 쿼리를 씁니다.
+
+###### ※ 스칼라: 단일값에 적용이 되어서 단일값의 결과(즉, 여기서는 dept 테이블에서 dept_name 데이터를 가져온것이다.)
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/98b9c716-a4ca-4290-bd61-f3032d603aae)
+### 스칼라 서브 쿼리 예제
+dept_name을 가져오는 쿼리입니다. 
+
+스칼라 서브쿼리를 이용하여 select문 안에서 dept 테이블을 연결합니다.(조인을 대신하여 사용)
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/f90da64c-17fd-4ab6-adf4-5ee2b7da0833)
+
+### 인라인 뷰 예제
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/2402943b-ca97-4db8-a482-dc27e5377c8c)
+
+### 중첩 서브쿼리 예제
