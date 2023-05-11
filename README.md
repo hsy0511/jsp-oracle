@@ -224,7 +224,7 @@ dept_name을 가져오는 쿼리입니다.
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/3e9f5b7e-a443-4186-aaf2-293e9e447e62)
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/2402943b-ca97-4db8-a482-dc27e5377c8c)
 ### 중첩 서브쿼리 예제
-중첩 서브쿼리는 서브쿼리를 중첩하여 사용할 수 있는 것으로 예제에서는 in으로 서브쿼리를 중첩하여 사용했다.
+중첩 서브쿼리는 서브쿼리를 중첩하여 사용할 수 있는 것으로 where, having와 같이 조건문에서 사용된다. 예제에서는 in으로 서브쿼리를 중첩하여 사용했다.
 
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/a9f11bd0-d4e4-45ec-8919-9123e2dc7b17)
 
