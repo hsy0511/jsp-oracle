@@ -8,7 +8,7 @@ oracle database는 크게 DQL, DDL, DML, DCL, TCL으로 5가지 그룹으로 나
 ### sql은 from -> where -> group by -> having -> select -> orderby 순으로 실행된다.
 
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/e7af957d-13bf-4e09-9d2c-5f09fe6fcb9e)
-
+###### ※ 레코드: 데이터베이스에서 하나의 단위로 취급되는 자료의 집합
 ## DQL
 DQL은 데이터 질의(의심나는 점을 물어서 밝히는 것) 언어이다.
 
@@ -136,7 +136,6 @@ where name = '허성삼';
 ```
 ### alter와 update 차이점
 ![image](https://github.com/hsy0511/oracle-/assets/104752580/b5b94b86-4ca7-4c83-8eed-e2a6e1f6034d)
-###### ※ 레코드: 데이터베이스에서 하나의 단위로 취급되는 자료의 집합
 ### DELETE
 delete는 데이터를 조건 값에 따라서 삭제한다.
 
