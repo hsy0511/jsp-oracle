@@ -207,8 +207,8 @@ savepoint는 지정한 c1값까지 데이터를 복구한다. rollback to savepo
 dept_name을 가져오는 쿼리입니다. 
 
 스칼라 서브쿼리를 이용하여 select문 안에서 dept 테이블을 연결합니다.(아우터 조인을 대신하여 사용)
-![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/f90da64c-17fd-4ab6-adf4-5ee2b7da0833)
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/07405bec-8652-4a18-b41b-036c6c251781)
+![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/f90da64c-17fd-4ab6-adf4-5ee2b7da0833)
 
 ### 인라인 뷰 예제
 인라인 안에서 실행되는 쿼리문으로 from 절에서 사용되는데 예제에서는 inner join을 사용하여 dept 테이블과 연결 시켜주었다.
