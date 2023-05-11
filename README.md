@@ -52,6 +52,7 @@ alter table Ex drop column star, drop primary key; 제약조건 기본키 삭제
 
 DDL에서 사용되는 데이터 타입을 알아보자
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/26f2d034-1b1b-4682-90c9-6ed79baaf94a)
+###### ※ 유니코드: 전 세계의 모든 문자를 컴퓨터에서 일관되게 표현하고 다룰 수 있도록 설계된 산업 표준방식
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/e0f55faf-546a-4282-b52c-cfc9a38c6af5)
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/946bffc7-6bd3-4f87-9034-b7acfe5bf974)
 ![image](https://github.com/hsy0511/oracle-foundation/assets/104752580/44b8c8ca-4a99-47b5-98c3-e7267e70ff1c)
