@@ -147,7 +147,7 @@ EX 테이블에서 name이 허성삼인 데이터 삭제
 delete from EX where name = '허성삼';
 ```
 
-## DCL (Data Control Language)
+## DCL (Data Control Language: 데이터 제어 언어)
 DCL은 DB에서 데이터에 대한 객체 권한 부여 등의 제어어이다.
 
 DCL은 크게 grant, revoke 등으로 나뉜다.
